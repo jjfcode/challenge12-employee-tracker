@@ -45,7 +45,7 @@ function mainMenu() {
             else if (response.menu === 'add an employee') {
                 addEmployee()
             }
-            else if (response.menu === 'update an employee role') {
+            else if (response.menu === 'update employee role') {
                 updateEmployeeRole()
             }
 
