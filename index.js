@@ -85,12 +85,24 @@ function addRole() {
             {
                 type: 'input',
                 message: 'What is the name of the role?',
-                name: 'title'
+                name: 'title',
+                validate: (input) => {
+                    if (input.trim() === '') {
+                        return 'Please enter a valid role name';
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
                 message: 'What is the salary of the role?',
-                name: 'salary'
+                name: 'salary',
+                validate: (input) => {
+                    if (input.trim() === '') {
+                        return 'Please enter a valid salary';
+                    }
+                    return true;
+                }
             },
             {
                 type: 'list',
@@ -115,7 +127,13 @@ function addDepartment() {
             {
                 type: 'input',
                 message: 'What is the name of the department?',
-                name: 'title'
+                name: 'title',
+                validate: (input) => {
+                    if (input.trim() === '') {
+                        return 'Please enter a valid department name';
+                    }
+                    return true;
+                }
             }
         ])
             .then(res => {
@@ -134,12 +152,24 @@ function addEmployee() {
                 {
                     type: 'input',
                     message: "What is the employee's first name?",
-                    name: 'first_name'
+                    name: 'first_name',
+                    validate: (input) => {
+                        if (input.trim() === '') {
+                            return 'Please enter a valid first name';
+                        }
+                        return true;
+                    }
                 },
                 {
                     type: 'input',
                     message: "What is the employee's last name?",
-                    name: 'last_name'
+                    name: 'last_name',
+                    validate: (input) => {
+                        if (input.trim() === '') {
+                            return 'Please enter a valid last name';
+                        }
+                        return true;
+                    }
                 },
                 {
                     type: 'list',
