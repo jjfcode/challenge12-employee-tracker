@@ -8,7 +8,7 @@ const pool = new Pool(
       user: process.env.USER_NAME,
       password: process.env.PASSWORD,
       host: 'localhost',
-      database: process.env.DBNAME
+      database: process.env.DB_NAME
     },
     console.log(`Connected to the books_db database.`)
   )
@@ -60,7 +60,7 @@ function updateEmployeeRole(){
                 }
             ])
             .then(res =>{
-                pool.query(`update omployee set role_id = ${res.role} where id=${res.employee}`,(err)=>{
+                pool.query(`update employee set role_id = ${res.role} where id=${res.employee}`,(err)=>{
                     console.log("Employee's role has been updated!")
                     viewEmployees()
                 })
@@ -70,7 +70,7 @@ function updateEmployeeRole(){
 }
 
 function addEmployee() {
-    pool.query('SELECT title as name, id as value',(err,{ rows }) => {
+    pool.query('SELECT title as name, id as value from role',(err,{ rows }) => {
         pool.query("SELECT CONCAT(first_name,' ',last_name) as name, id as value from employee", (err, { rows:managerRows }) => {
             inquirer.prompt([
                 {
