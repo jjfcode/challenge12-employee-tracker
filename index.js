@@ -80,7 +80,7 @@ function updateEmployeeRole(){
 }
 
 function addRole(){
-    pool.query('SELECT name as department, id as value from department', (err, { rows }) => {
+    pool.query('SELECT name, id as value from department', (err, { rows }) => {
         inquirer.prompt([
             {
                 type:'input',
@@ -100,9 +100,9 @@ function addRole(){
             }
         ])
         .then(res => {
-            pool.query(`INSERT INTO role (title, salary, department_id) VALUE ('${res.title}', '${res.salary}', ${res.department})`,(err) => {
+            pool.query(`INSERT INTO role (title, salary, department_id) VALUES ('${res.title}', '${res.salary}', ${res.department})`,(err) => {
                 console.log(`Added ${res.title} to the database`)
-                viewRoles()
+                mainMenu()
             })
         })
     })
