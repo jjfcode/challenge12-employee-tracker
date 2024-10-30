@@ -39,6 +39,10 @@ function mainMenu(){
         else if (response.menu === 'update an employee role') {
             updateEmployeeRole()
         }
+        else if (response.menu === 'view all roles') {
+            viewRoles()
+        }
+
     })
 }
 
@@ -126,5 +130,15 @@ function viewDepartments(){
     pool.query('SELECT * FROM department', (err, { rows }) => {
         printTable(rows)
         mainMenu()
+    })
+}
+
+function viewRoles(){
+    pool.query(`SELECT role.id, role.title, department.name AS department, role.salary
+FROM role
+JOIN department
+ON department.id = role.department_id;`,(err,{ rows })=>{
+    printTable(rows)
+    mainMenu()
     })
 }
