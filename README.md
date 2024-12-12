@@ -89,6 +89,8 @@ node index.js
 
 [Walkthrough video](https://drive.google.com/file/d/1e2kghSBBM9uLlQ14nzKVyLLJdTHG2o_b/view?usp=sharing)
 
+---
+
 ## Credits
 
 I used [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) and [CHAT & ASK AI](https://askaichat.app/) for help on my README.
