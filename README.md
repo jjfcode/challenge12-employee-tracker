@@ -18,6 +18,8 @@ A command-line application for managing a company's employee database, using Nod
 
 -[Repo](#repo)
 
+-[Walkthrough Video](#wlakthrough-video)
+
 -[Credits](#credits)
 
 -[License](#license)
@@ -82,6 +84,10 @@ node index.js
 [Github Repo](https://github.com/jjfcode/challenge12-employee-tracker)
 
 ---
+
+## **Wlakthrough Video:**
+
+[Walkthrough video](https://drive.google.com/file/d/1e2kghSBBM9uLlQ14nzKVyLLJdTHG2o_b/view?usp=sharing)
 
 ## Credits
 
